@@ -12,7 +12,7 @@ const LikeButton: React.FC<LikeButtonProps> = ({ initialLikes = 0 }) => {
   return (
     <button
       onClick={handleLike}
-      className="p-2 bg-red-500 text-white rounded hover:bg-red-600 transition duration-200"
+      className="p-2 text-white transition duration-200"
     >
       ❤️ {likes}
     </button>

@@ -13,7 +13,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({ shareUrl }) => {
   return (
     <button
       onClick={handleShare}
-      className="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200"
+      className="p-2 text-white transition duration-200"
     >
       🔗 Share
     </button>
