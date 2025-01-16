@@ -5,7 +5,7 @@ import VideoReel from './reel';
 export interface tag {
     name: string,
     url: string,
-    position: any
+    position: {x: number, y: number}
 };
 
 interface Reel {

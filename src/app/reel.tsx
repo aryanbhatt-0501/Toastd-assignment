@@ -2,8 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import ReelControls from "./share/container";
 import { tag } from "./reelContainer";
-import Mute from "../../public/mute.svg";
-import Unmute from "../../public/unmute.svg";
+import Image from "next/image";
 
 interface VideoReelProps {
   videoSrc: string;
@@ -32,14 +31,14 @@ const VideoReel: React.FC<VideoReelProps> = ({
     }
   }, [isVisible]);
 
-  const togglePlayPause = () => {
-    if (isPlaying) {
-      videoRef.current?.pause();
-    } else {
-      videoRef.current?.play();
-    }
-    setIsPlaying(!isPlaying);
-  };
+//   const togglePlayPause = () => {
+//     if (isPlaying) {
+//       videoRef.current?.pause();
+//     } else {
+//       videoRef.current?.play();
+//     }
+//     setIsPlaying(!isPlaying);
+//   };
 
   const toggleMute = () => {
     if (!videoRef.current) return;
@@ -116,10 +115,10 @@ const VideoReel: React.FC<VideoReelProps> = ({
       >
         {!isPlaying && (
           <div className="text-white bg-black bg-opacity-50 rounded-full p-4">
-            <img
+            <Image
+              src="https://img.icons8.com/ios-filled/50/play--v1.png"
               width="50"
               height="50"
-              src="https://img.icons8.com/ios-filled/50/play--v1.png"
               alt="play--v1"
             />
           </div>
